@@ -8,11 +8,13 @@ public class Furniture {
 	private  String category;
 	private  double price;
 	private  String material;
+	private int furnitureId;
 	public Furniture() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Furniture(String name, String color, String brand, String category, double price, String material) {
+	public Furniture(String name, String color, String brand, String category, double price, String material,
+			int furnitureId) {
 		super();
 		this.name = name;
 		this.color = color;
@@ -20,6 +22,7 @@ public class Furniture {
 		this.category = category;
 		this.price = price;
 		this.material = material;
+		this.furnitureId = furnitureId;
 	}
 	public String getName() {
 		return name;
@@ -57,13 +60,16 @@ public class Furniture {
 	public void setMaterial(String material) {
 		this.material = material;
 	}
+	public int getFurnitureId() {
+		return furnitureId;
+	}
+	public void setFurnitureId(int furnitureId) {
+		this.furnitureId = furnitureId;
+	}
 	@Override
 	public String toString() {
 		return "Furniture [name=" + name + ", color=" + color + ", brand=" + brand + ", category=" + category
-				+ ", price=" + price + ", material=" + material + "]";
+				+ ", price=" + price + ", material=" + material + ", furnitureId=" + furnitureId + "]";
 	}
 	
-	
-
-
 }

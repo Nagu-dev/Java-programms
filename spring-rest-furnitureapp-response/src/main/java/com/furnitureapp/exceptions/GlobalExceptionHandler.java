@@ -79,25 +79,24 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler{
 	}
 	
 	
-//	  @ExceptionHandler(FurnitureNotFoundException.class) public ResponseEntity<Object>
-//	  handleFurnitureNotFound(FurnitureNotFoundException ex){
-//	 
-//	  
-//	  String message=ex.getMessage(); List<Object>
-//	  error=Arrays.asList(" book not avilable"); HttpHeaders httpHeaders=new
-//	  HttpHeaders();
-//	  
-//	  httpHeaders.add("info", "book not found"); ApiErrors errors=new
-//	  ApiErrors(LocalDateTime.now(),message,HttpStatus.INTERNAL_SERVER_ERROR,
-//	  HttpStatus.INTERNAL_SERVER_ERROR.value(),error); return
-//	  ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).headers(httpHeaders).
-//	  body(errors);
-//	  
-//	  
-//	 
-//	 }
-//	 
-//	
+	  @ExceptionHandler(FurnitureNotFoundException.class) public ResponseEntity<Object>
+	  handleFurnitureNotFound(FurnitureNotFoundException ex){
+	 
+	  
+	  String message=ex.getMessage(); List<Object>
+	  error=Arrays.asList(" book not avilable"); HttpHeaders httpHeaders=new
+	  HttpHeaders();
+	  
+	  httpHeaders.add("info", "book not found"); ApiErrors errors=new
+	  ApiErrors(LocalDateTime.now(),message,HttpStatus.INTERNAL_SERVER_ERROR,
+	  HttpStatus.INTERNAL_SERVER_ERROR.value(),error); return
+	  ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).headers(httpHeaders).
+	  body(errors);
+	  
+	  
+	 
+	 }
+
 	@ExceptionHandler(Exception.class)
 	public ResponseEntity<Object> handleBookNotFound(Exception ex){
 		
